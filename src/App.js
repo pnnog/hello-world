@@ -6,23 +6,25 @@ import About from "pages/About";
 import Home from "pages/Home";
 import NotFound from "pages/NotFound";
 import Menu from "components/Menu";
-import Banner from "components/Banner";
+import Footer from "components/Footer";
+import Layout from "pages/Layout";
 
 function App() {
   return (
-    <>
     <BrowserRouter>
       <Menu/>
-      <Banner />
-      
+
       <Routes>
-        <Route path='/' element={<Home />}/> 
-        <Route path='/about' element={<About />}/> 
+        <Route path="/" element={<Layout />}> 
+          <Route index element={<Home />}/> 
+          <Route path='about' element={<About />}/> 
+        </Route>
+
         <Route path='*' element={<NotFound />}/> 
       </Routes>  
+
+      <Footer />
     </BrowserRouter>
-    
-    </>
   );
 }
 

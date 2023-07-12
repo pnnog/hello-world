@@ -1,9 +1,14 @@
-import './home.module.css'
+import Post from 'components/Post'
+import styles from './home.module.css'
+import posts from 'json/posts.json'
 
 export default function Home () {
   return (
     <>
-      <h1>Home</h1>
+      <ul className={styles.posts}>
+        {posts.map(post=> <li key={post.id}> <Post post = {post} /> </li>)}
+      </ul>
+
     </>
   )
 }
