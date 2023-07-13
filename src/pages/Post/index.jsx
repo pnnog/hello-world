@@ -7,6 +7,7 @@ import styles from './post.module.css'
 import NotFound from "pages/NotFound"
 import Layout from "pages/Layout"
 import PostDefault from "components/PostDefault"
+import RecomendedPosts from "components/RecomendedPosts"
 
 export default function Post() {
 
@@ -15,23 +16,30 @@ export default function Post() {
   const {id} = useParams()
   const post = getPost(id)
 
+ 
 
   if(!post){
     return <NotFound />
   }
+
  
   return (
-    <Layout>
-      <PostDefault 
-        title={post.titulo} 
-        coverImage={`/assets/posts/${post.id}/capa.png`}
-      >
-        <div className={styles.post_markdown_container}>
-          <ReactMarkdown>
-            {post.texto}
-          </ReactMarkdown>
-        </div>
-      </PostDefault>      
-    </Layout>
+    <main>
+      <Layout>
+        <PostDefault 
+          title={post.titulo} 
+          coverImage={`/assets/posts/${post.id}/capa.png`}
+        >
+          <div className={styles.post_markdown_container}>
+            <ReactMarkdown>
+              {post.texto}
+            </ReactMarkdown>
+          </div>
+        </PostDefault>   
+
+        <RecomendedPosts currentPost={post.id} posts={posts} />   
+      </Layout>
+    </main>
+
   )
 }

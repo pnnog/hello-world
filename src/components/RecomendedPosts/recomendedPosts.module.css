@@ -1,0 +1,6 @@
+.recommended{
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding: 0 7.5rem
+}

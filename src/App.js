@@ -9,12 +9,13 @@ import Menu from "components/Menu";
 import Footer from "components/Footer";
 import Layout from "pages/Layout";
 import Post from "pages/Post";
+import ScrollToTop from "components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
       <Menu/>
-      
+      <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Layout />}> 
           <Route index element={<Home />}/> 
