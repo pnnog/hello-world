@@ -1,5 +1,5 @@
 .footer{
-  background-color: rgb(12, 20, 44);
+  background-color: var(--azul-escuro);
   padding: 2.4rem;
   color: white;
   display: flex;

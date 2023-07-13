@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: space-between;
   gap:4rem;
-  background-color: rgb(12, 20, 44);
+  background-color: var(--azul-escuro);
   min-height: 50rem;
   padding: 4rem 2.4rem;
 }

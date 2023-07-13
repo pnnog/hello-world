@@ -29,19 +29,3 @@
   font-weight: 400;
 }
 
-.button{
-  background-color: rgb(21, 89, 216);
-  color: white;
-  border: 0;
-  padding: .8rem 3rem;
-  border-radius: 2rem;
-  font-size: 1.4rem;
-  cursor: pointer;
-
-  transition: .2s ease-in-out;
-}
-
-.button:hover{
-    transform: translateY(-.2rem);
-    background-color: rgb(18, 98, 247);
-}
