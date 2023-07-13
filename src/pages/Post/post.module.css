@@ -32,10 +32,12 @@
 .post_markdown_container img {
     display: block;
     margin: 0 auto;
+    max-width: 100%;
 }
 
 .post_markdown_container ul {
     font-size: 1.5rem;
+    padding-left: 2rem;
 }
 
 .post_markdown_container ul > li {
