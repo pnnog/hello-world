@@ -1,5 +1,5 @@
 import { ReactMarkdown } from "react-markdown/lib/react-markdown"
-import { Route, Routes, useParams } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 import posts from 'json/posts.json'
 
@@ -21,24 +21,17 @@ export default function Post() {
   }
  
   return (
-      <Routes>
-        <Route path="*" element={<Layout/>}>
-          <Route index element={
-            <PostDefault 
-              title={post.titulo} 
-              coverImage={`/assets/posts/${post.id}/capa.png`}
-            >
-              <div className={styles.post_markdown_container}>
-                <ReactMarkdown>
-                  {post.texto}
-                </ReactMarkdown>
-              </div>
-            </PostDefault>
-            
-          }/>
-    
-        </Route>
-      </Routes>
-    
+    <Layout>
+      <PostDefault 
+        title={post.titulo} 
+        coverImage={`/assets/posts/${post.id}/capa.png`}
+      >
+        <div className={styles.post_markdown_container}>
+          <ReactMarkdown>
+            {post.texto}
+          </ReactMarkdown>
+        </div>
+      </PostDefault>      
+    </Layout>
   )
 }

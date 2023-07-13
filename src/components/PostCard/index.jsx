@@ -5,7 +5,7 @@ import Button from 'components/Button'
 export default function PostCard({post}) {
   
   return (
-    <Link to={`/post/${post.id}`}>
+    <Link className={styles.link} to={`/post/${post.id}`}>
       <div className={styles.post}>
         <img
           className={styles.image}

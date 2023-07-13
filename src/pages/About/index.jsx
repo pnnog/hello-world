@@ -1,7 +1,7 @@
 import PostDefault from 'components/PostDefault'
 import styles from './about.module.css'
 import coverImage from './sobre_mim_capa.png'
-import photo from './sobre_mim_foto.png'
+import photo from './sobre_mim_foto.jpg'
 
 export default function About () {
   return (
