@@ -8,7 +8,6 @@ Protótipo SPA de um blog ou portfólio
 
 - React JS
 - React Router Dom
-- Styled components
 
 # :open_file_folder: Acesso ao projeto
 Você pode acessar o código fonte do projeto original ou acessar ou baixá-lo
